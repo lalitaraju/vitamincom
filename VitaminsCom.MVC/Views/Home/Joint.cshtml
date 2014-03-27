@@ -1,0 +1,73 @@
+﻿@model  VitaminsCom.MVC.Models.EmailModel
+<link href="@Url.Content("~/Content/Joint.css")" rel="stylesheet" type="text/css">
+<link href="@Url.Content("~/Content/vitamins2.css")" rel="stylesheet" type="text/css">  
+
+<script src="@Url.Content("http://code.jquery.com/jquery-1.9.1.js")" type="text/javascript"></script>   
+  <script type="text/javascript" src="@Url.Content("~/js/EmailSignUp.js")"></script>          
+     <script language="javascript" type="text/javascript">
+     	$(document).ready(function () {
+     		$("#contatbtn").click(function (event) {
+     			return emailsignup();
+     		});
+     	});
+      
+    </script>
+       
+<div id="pagecontainer">
+	<div id="pagewrapper">
+
+<div class="subpage">
+<h2>Not sure what to take for better</h2>
+  <h1 class="title">Joint Health?</h1>
+
+
+<h3>By 2030, Joint Concerns may Affect 67 Million Americans over age 18.</h3>
+
+ <p> We can help with our FREE and informative Joint Health Guide. Learn
+ more about ways you can improve your joint health, PLUS, get 15% off 
+joint supplements now!</p>
+
+</div>
+
+        <div class="thankyouwindow" style="display: none" id="thankyou">
+            <br />
+            <p class="lgwhitetext">
+                Thank You!</p>
+            <br />
+            <br />
+            <p class="medwhitetext">
+                You're on your way to good health!<br />
+                <br />
+                Check your inbox for your free guide and special coupon.
+            </p>
+        </div>
+<div class="offerwindow" id="offerwindow">
+
+<!--signup-->
+<p class="lgwhitetext">
+It’s so easy!</p>
+
+<p class="medwhitetext">
+Just enter your email and submit!
+</p>
+
+
+<p class="medwhitetext">
+ <form id="contactus" method="post" action="javascript:submit();" >
+<p class="medwhitetext">
+E-mail: 
+ @*@Html.TextBoxFor(model => model.Email, new { @class = "emailfield",  @id = "emailcontactus", @value = "" })*@
+<input class="emailfield" type="email" value="" name="Email" id="emailcontactus"  placeholder="Enter your email" data-val-required="Email required" data-val="true">
+<input type="hidden" name="Acqsource" id="Acqsource" value="vitamins" />
+<input type="hidden" name="Acqsubsource" id ="Acqsubsource" value="joint" />
+<input type="hidden" name="Divsion" id ="Division" value="VitaminsJointGuide" />
+<input type="hidden" name="language" id ="Language" value="eng" />
+</p>
+<a id="contatbtn" ><input src="@Url.Content("~/images/SEND_button.jpg")" type="image"></a>
+
+  <p>
+  <a href="@Url.Action("Privacy")">Privacy Policy</a></p>
+</form>
+</div> 
+     </div>
+</div>

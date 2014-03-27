@@ -1,0 +1,15 @@
+﻿
+#pagecontainer {
+	margin:0 auto;
+	padding:0;
+	background-position:top;
+	width:1010px;
+	height:1302px;
+	background-image: url(../images/JOINT_background.jpg);
+	background-repeat: no-repeat;
+
+}
+
+#pagewrapper {
+		padding-left: 35px;
+}
